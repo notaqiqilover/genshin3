@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+     .c{background-color: rgb(0, 0, 62);
+    color: beige;}  
+    .container{
+      height: auto;
+      width: auto;  
+      background-color: rgb(25, 25, 112);
+      display: flex;
+      padding: 20px;
+      flex-direction: column;
+    } 
+    .star{
+      background-image: url(https://rerollcdn.com/STARRAIL/Rarity/5_sm.png)!important;
+      width: 100px;
+      height: 100px;
+      border-radius: 5%;
+      margin-right: 10px;
+    }
+    .uwu{
+      width: 100px;
+      float: left;  
+    }
+    .element{
+      padding: 3px;
+      height: 50px;
+      width: 50px;
+    }
+    .head{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .top-head{
+      display: flex;
+      justify-content: space-between;
+    }
+    .zhongli{
+      width: 100px;
+      height: 100px;
+    }
+    .bottom-head{
+      display: flex;
+    }
+    .polearm{
+      background-color: #303b7a;
+      height: 40px;
+      border-radius: 5px;
+      align-items: center;
+      display: flex;
+      padding: 10px;
+      margin-right: 5px;
+    }
+    .polearm-img{
+      width: 30px;
+    }
+    .support{
+      background-color: #303b7a;
+      height: 40px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-left: 5px;
+    }
+    .Materials{
+      background-color: #303b7a;
+      height: 50px;
+      border-radius: 5px;
+      display: flex;
+      padding: 10px;
+      width: calc(33.33% - 6.66px);
+      margin-bottom: 10px;
+      justify-content: center;
+      
+    }
+    
+    .header{
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .mats{
+      width: 30px;
+      height: 30px;
+    }
+
+    .container-m{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .zhongliupgrademats{
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: rgb(210, 177, 30);
+    }
+
+    .weaponnumber{
+      height: 30px;
+      width: 30px;
+      border-radius: 5px;
+      background-color: rgb(95, 119, 160);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+    }
+    .weaponimg{
+      width: 50px;
+      height: 50px;
+    }
+    .threestar{
+      background-image: url(https://rerollcdn.com/STARRAIL/Rarity/3_sm.png);
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .weapons{
+      height: 50px;
+      background-color: #2a529d;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .weaponsss{
+      width: 48%;
+    }
+
+    .weapon-name{
+      margin: 10px;
+    }
+    
+    .zhonglibestweapon{
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: rgb(210, 177, 30);
+    }
+
+    .weaponsandpain{
+      display: flex;
+      justify-content: space-between;
+    }
+    .artifactssss{
+      position: absolute;
+      padding: 3px;
+      background-color: #000000;     
+      right: 0px;
+      bottom: 0px;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+    }
+
+    .artifact{
+      position: relative;
+      width: 50px;
+      height: 50px;
+    }
+
+    .fourstar{
+      background-image: url(https://rerollcdn.com/STARRAIL/Rarity/4_sm.png);
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .beststats{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .stats{
+      width: calc(33.33% - 6.66px);
+      height: 50px;
+      background-color: #2a529d;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .substats{
+      background-color: #2a529d;
+      border-radius: 5px;
+      height: 50px;
+      width: 100%;
+      margin-bottom: 10px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .zhonglibeststats{
+      color: rgb(210, 177, 30);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .team{
+      background-color: #24285a;
+      width: calc(33.33% - 6.66px);
+      padding: 10px 20px 10px 20px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    
+    .teams{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .character{
+      height: 50px;
+      width: 50px;
+    }
+
+    .elements{
+      position: absolute;
+      padding: 3px;
+      background-color: #303b7a;
+      border-radius: 50px;      
+      right: -10px;
+      top: -10px;
+      height: 25px;
+      width: 25px;
+    }
+
+    .teamname{
+      margin-bottom: 20px;
+    }
+
+    .fivestar{
+      background-image: url(https://rerollcdn.com/STARRAIL/Rarity/5_sm.png)!important;
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .char{
+      display:flex;
+      justify-content: space-between;
+    }
+
+    .talentimg{
+      background-color: #303b7a;
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+      padding: 10px;
+    }
+
+    .talents{
+      background-color: #1c1f46;
+      display: flex;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .talent{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 140px;
+    }
+
+    .talentdescription{
+      margin-left: 30px;
+    }
+
+    .skillname{
+      color: #9ca2da;
+      font-weight: 600;
+    }
+
+    table{
+      width: 100%;
+      color: beige;
+    }
+
+    .ascensionMats{
+      position: relative;
+      width: 50px;
+      height: 50px;
+    }
+
+    .ascensionMatss{
+      position: absolute;
+      padding: 3px;
+      background-color: rgb(77, 95, 196);     
+      right: 0px;
+      bottom: 0px;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+    }
+
+    .ascensionMatsss{
+      display: flex;
+      min-width: 200px;
+    }
+
+    .Ascensionmatsname{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 5px;
+    }
+    .backgroundcolor{
+      background-color: #303b7a;
+      border-radius: 5px;
+    }
+    tbody tr{
+      background-color: #24285a;
+      border-bottom: 1px solid #9ca2da;
+    }
+
+    tbody tr td{
+      padding: 20px;
+    }
+
+    thead{
+      background-color: #303b7a;
+    }
+
+    thead tr th{
+      padding: 10px;
+    }
+
+    .ascensionmats{
+      overflow-x: auto;
+    }
+
+  
+    @media (max-width: 991px){
+      .teams{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .team{
+        width: calc(50% - 6.66px);
+      }
+    }
+
+    @media (max-width: 767px){
+      .teams{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .team{
+        width: 100%;
+      }
+      .Materials{
+        width: calc(50% - 6.66px);
+      }
+      .weaponsandpain{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .weaponsss{
+        width: 100%;
+      }
+
+    }
+
+    @media (max-width: 576px){
+      .teams{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .team{
+        width: 100%;
+      }
+      .Materials{
+        width: calc(50% - 6.66px);
+      }
+      .weaponsandpain{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .weaponsss{
+        width: 100%;
+      }
+      .talents{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .talent{
+        width: 100%;
+      }
+      .talentdescription{
+        width: 100%;
+      }
+    }
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <section><header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="C:\Users\kiki0\Desktop\HTML\welkin_dream_come_trululu.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <h3 style="color: beige;" class="title">GENSHIN.GG</h3>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link">Zenless Zone Zero</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Genshin Impact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Honkai: Star Rail</a></li>
+    </ul>
+  </header></section>
+   <section>
+    <div class="container">
+      <div class="header">
+        <img src="https://rerollcdn.com/GENSHIN/Characters/1/Zhongli.png" alt="" class="zhongli star">
+      
+      <div class="head">
+        <div class="top-head">
+           <h2>Genshin Impact Zhongli Build</h2> 
+            <img src="https://rerollcdn.com/GENSHIN/Elements/Element_Geo.png" alt="" class="element">
+        </div>
+        <div class="bottom-head">
+          <div class="polearm">
+            <img src="https://rerollcdn.com/GENSHIN/UI/weapon_polearm.png" alt="" class="polearm-img">polearm
+          </div>
+          <div class="support">
+            support
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <div class="materials">
+        <div class="zhongliupgrademats">
+          Zhongli Upgrade Materials
+        </div>
+        <div class="container-m">
+          <div class="Materials">
+            <div>
+              <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Gold.png" alt="" class="mats">
+            </div>
+            <div>
+              Gold
+            </div>
+          </div>
+          <div class="Materials">
+            <div>
+              <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Tusk_of_Monoceros_Caeli.png" alt="" class="mats">
+            </div>
+            <div>
+              Tusk of Monoceros Caeli
+            </div>
+          </div>
+          <div class="Materials">
+            <div>
+              <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Prithiva_Topaz_Sliver.png" alt="" class="mats">
+            </div>
+            <div>
+              Prithiva Topaz Sliver
+            </div>
+          </div>
+          <div class="Materials">
+            <div>
+              <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Basalt_Pillar.png" alt="" class="mats">
+            </div>
+            <div>
+              Basalt Pillar
+            </div>
+          </div>
+          <div class="Materials">
+            <div>
+              <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Cor_Lapis.png" alt="" class="mats">
+            </div>
+            <div>
+              Cor Lapis
+            </div>
+          </div>
+          <div class="Materials">
+            <div>
+              <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Slime_Condensate.png" alt="" class="mats">
+            </div>
+            <div>
+              Slime Condensate
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weaponsandpain">
+        <div class="weaponsss">
+          <div class="zhonglibestweapon">
+            Zhongli's best weapons
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                1
+              </div>
+              <div class="weapon">
+              <img src="https://rerollcdn.com/GENSHIN/Weapons/Black_Tassel.png" alt="" class="weaponimg threestar">
+              </div>
+              <div class="weapon-name">
+              Black Tassel
+              </div>
+            </div>
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                2
+              </div>
+              <div class="weapon">
+              <img src="https://rerollcdn.com/GENSHIN/Weapons/Favonius_Lance.png" alt="" class="weaponimg fourstar">
+              </div>
+              <div class="weapon-name">
+              Favonius Lance
+              </div>
+            </div>
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                3
+              </div>
+              <div class="weapon">
+              <img src="https://rerollcdn.com/GENSHIN/Weapons/Staff_of_Homa.png" alt="" class="weaponimg star">
+              </div>
+              <div class="weapon-name">
+                Staff of Homa
+              </div>
+            </div>
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                4
+              </div>
+              <div class="weapon">
+              <img src="https://rerollcdn.com/GENSHIN/Weapons/Skyward_Spine.png" alt="" class="weaponimg star">
+              </div>
+              <div class="weapon-name">
+              Skyward Spine
+              </div>
+            </div>
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                5
+              </div>
+              <div class="weapon">
+              <img src="https://rerollcdn.com/GENSHIN/Weapons/Engulfing_Lightning.png " alt="" class="weaponimg star">
+              </div>
+              <div class="weapon-name">
+              Engulfing Lightning
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weaponsss">
+          <div class="zhonglibestweapon">
+            Zhongli's best artifacts
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                1
+              </div>
+              <div class="artifact">
+                <img src="https://rerollcdn.com/GENSHIN/Gear/tenacity_of_the_millelith.png" alt="" class="weaponimg star">
+                <div class="artifactssss">
+                 4
+                </div>
+              </div>
+              <div class="weapon-name">
+                Tenacity of the millelith
+              </div>
+            </div>  
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                2
+              </div>
+              <div class="artifact">
+                <img src="https://rerollcdn.com/GENSHIN/Gear/archaic_petra.png" alt="" class="weaponimg star">
+                <div class="artifactssss">
+                 4
+                </div>
+              </div>
+              <div class="weapon-name">
+                Archaic Petra
+              </div>
+            </div>  
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                3
+              </div>
+              <div class="artifact">
+                <img src="https://rerollcdn.com/GENSHIN/Gear/deepwood_memories.png" alt="" class="weaponimg star">
+                <div class="artifactssss">
+                 4
+                </div>
+              </div>
+              <div class="weapon-name">
+                Deepwood Memories
+              </div>
+            </div>  
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                4
+              </div>
+              <div class="artifact">
+                <img src="https://rerollcdn.com/GENSHIN/Gear/instructor.png" alt="" class="weaponimg fourstar">
+                <div class="artifactssss">
+                 4
+                </div>
+              </div>
+              <div class="weapon-name">
+                Instructor
+              </div>
+            </div>  
+          </div>
+          <div class="weaponss">
+            <div class="weapons">
+              <div class="weaponnumber">
+                5
+              </div>
+              <div class="artifact">
+                <img src="https://rerollcdn.com/GENSHIN/Gear/noblesse_oblige.png" alt="" class="weaponimg star">
+                <div class="artifactssss">
+                 4
+                </div>
+              </div>
+              <div class="weapon-name">
+                Nobless Oblige
+              </div>
+            </div>  
+          </div>
+        </div>
+     
+      </div>
+      <div>
+        <div class="zhonglibeststats">
+          zhongli's best stats
+        </div>
+        <div class="beststats">
+          <div class="stats">
+            <b>Sands: &nbsp;</b> HP%
+          </div>
+          <div class="stats">
+            <b>Goblet: &nbsp;</b> HP%
+          </div>
+          <div class="stats">
+            <b>circlet: &nbsp;</b> HP%
+          </div>
+          <div class="substats">
+            <b>Substats: &nbsp;</b> HP% >HP >Energy Recharge
+          </div>  
+        </div>
+      </div>
+      <div>
+        <div class="zhonglibeststats">
+          Best Zhongli Teams
+        </div>
+        <div class="teams">
+          <div class="team">
+            <div class="teamname">
+              Hu Tao Vaporize
+            </div>
+            <div class="char">
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Hu Tao.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Pyro.png" alt="">  
+                </div>
+                <div class="fourstar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Xingqiu.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Hydro.png" alt="">  
+                </div>
+          
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Yelan.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Hydro.png" alt="">  
+                </div>
+              
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Zhongli.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Geo.png" alt="">  
+                </div>
+            </div>
+          </div>
+          <div class="team">
+            <div class="teamname">
+              Xiao
+            </div>
+            <div class="char">
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Xiao.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Anemo.png" alt="">  
+                </div>
+                <div class="fourstar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Faruzan.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Anemo.png" alt="">  
+                </div>
+          
+                <div class="fourstar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Bennett.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Pyro.png" alt="">  
+                </div>
+              
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Zhongli.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Geo.png" alt="">  
+                </div>
+            </div>
+          </div>
+          <div class="team">
+            <div class="teamname">
+              Yoimiya Vaporize
+            </div>
+            <div class="char">
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Yoimiya.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Pyro.png" alt="">  
+                </div>
+                <div class="fourstar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Xingqiu.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Hydro.png" alt="">  
+                </div>
+          
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Yelan.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Hydro.png" alt="">  
+                </div>
+              
+                <div class="fivestar" style="position:relative;">
+                  <img class="character" src="https://rerollcdn.com/GENSHIN/Characters/1/Zhongli.png" alt="zhongli">
+                  <img class="elements" src= "https://rerollcdn.com/GENSHIN/Elements/Element_Geo.png" alt="">  
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="talentss">
+      <div class="zhonglibeststats">
+      Zhongli Talents
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/UI_GachaTypeIcon_Polearm.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Normal Attack
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Rain of Stone
+          </div>
+          <div>
+            Normal Attack Performs up to 6 consecutive spear strikes. Charged Attack Consumes a certain amount of Stamina to lunge forward, causing stone spears to fall along his path. Plunging Attack Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact. 
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/talent_2.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Elemental Skill
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Dominus Lapidis
+          </div>
+          <div>
+            Press Commands the omnipresent power of the earth to solidify into a Stone Stele, standing 30 seconds, dealing AoE Geo DMG at the creation. Hold Causes nearby Geo energy to explode, causing the following effects: If their maximum number hasn't been reached, creates a Stone Stele. Creates a shield of jade. The shield's DMG Absorption scales based on Zhongli's Max HP. Possesses 150% DMG Absorption against all Elemental and Physical DMG. Deals AoE Geo DMG. If there are nearby targets with the Geo element, it will drain a large amount of Geo element from a maximum of 2 such targets. This effect does not cause DMG. Stone Stele: When created, deals AoE Geo DMG. Additionally, every 2 seconds, it will resonate with other nearby Geo Constructs, dealing Geo DMG to surrounding opponents. Stele creation and Resonance generate 0.5 elemental particles. The Stone Stele is considered a Geo Construct that can both be climbed and used to block attacks. Only one Stele created by Zhongli himself may initially exist at any one time. Jade Shield Possesses 150% DMG Absorption against all Elemental and Physical DMG. Characters protected by the Jade Shield will decrease the Elemental RES and Physical RES of opponents in a small AoE by 20%. This effect cannot be stacked.+
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/talent_3.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Elemental Burst 
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Planet Befall
+          </div>
+          <div>
+            Brings a falling meteor down to earth, dealing massive Geo DMG to opponents caught in its AoE and applying the Petrification status to them. Petrification Opponents affected by the Petrification status cannot move.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="talentss">
+      <div class="zhonglibeststats">
+      Zhongli Passives
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/talent_4.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Ascension 1
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Resonant Waves
+          </div>
+          <div>
+            When the Jade Shield takes DMG, it will Fortify: Fortified characters have 5% increased Shield Strength. Can stack up to 5 times, and lasts until the Jade Shield dissapears.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/talent_5.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Ascension 4
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Dominance of Earth
+          </div>
+          <div>
+            Zhongli deals bonus DMG based on his Max HP: Normal Attack, Charged Attack, and Plunging Attack DMG is increased by 1.39% of Max HP. Dominus Lapidis Stone Stele, resonance, and hold DMG is increased by 1.9% of Max HP. Planet Befall deals additional DMG equal to 33% of Zhongli's Max HP.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/talent_6.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Passive 
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Arcanum of Crystal
+          </div>
+          <div>
+            Refunds 15% of the ores used when crafting Polearm-type weapons.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="talentss">
+      <div class="zhonglibeststats">
+      Zhongli Constellations
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/constellation_1.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Constellation 1
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Rock, the Backbone of Earth
+          </div>
+          <div>
+            Increases the maximum number of Stone Steles created by Dominus Lapidis that may exist simultaneously to 2.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/constellation_2.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Constellation 2  
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Stone, the Cradle of Jade
+          </div>
+          <div>
+            Planet Befall grants nearby characters on the field a Jade Shield when it descends.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/constellation_3.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Constellation 3
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Jade, Shimmering through Darkness
+          </div>
+          <div>
+            Increases the Level of Dominus Lapidis by 3. Maximum upgrade level is 15.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/constellation_4.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Constellation 4
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Topaz, Unbreakable and Fearless
+          </div>
+          <div>
+            Increases Planet Befall's AoE by 20% and increases the duration of Planet Befall's Petrification effect by 2s.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/constellation_5.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Constellation 5
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Lazuli, Herald of the Order
+          </div>
+          <div>
+            Increase the Level of Planet Befall by 3. Maximum upgrade level is 15.
+          </div>
+        </div>
+      </div>
+      <div class="talents">
+        <div class="talent">
+          <div>
+           <img src="https://rerollcdn.com/GENSHIN/Skill/1/Zhongli/constellation_6.png" alt="" class="talentimg"> 
+          </div>
+          <div class="skillname">
+            Constellation 6
+          </div>
+        </div>
+        <div class="talentdescription">
+          <div class="skillname">
+            Chrysos, Bounty of Dominator
+          </div>
+          <div>
+            When the Jade Shield takes DMG, 40% of that incoming DMG is converted to HP for the current character. A single instance of regeneration cannot exceed 8% of that character's Max HP.
+          </div>
+        </div>
+      </div>
+      <div class="ascensionmats">
+        <div>
+          Zhongli Ascension Costs
+        </div>  
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>lvl</th>
+                <th>cost</th>
+                <th>Material</th>
+                <th>Material</th>
+                <th>Material</th>
+                <th>Material</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>20</td>
+                <td>20000</td>
+                <td>
+                  <div class="ascensionMatsss">
+                   <div class="ascensionMats">
+                    <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Prithiva_Topaz_Sliver.png" alt="" class="weaponimg backgroundcolor">
+                    <div class="ascensionMatss">
+                     1
+                    </div></div> 
+                    <div class="Ascensionmatsname">
+                    Prithiva Topaz Sliver
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="ascensionMatsss">
+                    <div class="ascensionMats">
+                     <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Cor_Lapis.png" alt="" class="weaponimg backgroundcolor">
+                     <div class="ascensionMatss">
+                      3
+                     </div></div> 
+                     <div class="Ascensionmatsname">
+                     Cor Lapis
+                     </div>
+                   </div>
+                </td>
+                <td>
+                  <div class="ascensionMatsss">
+                    <div class="ascensionMats">
+                     <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Slime_Condensate.png" alt="" class="weaponimg backgroundcolor">
+                     <div class="ascensionMatss">
+                      3
+                     </div></div> 
+                     <div class="Ascensionmatsname">
+                     Slime Condensate
+                     </div>
+                   </div>
+                </td>
+              </tr> 
+              <tr>
+                <td>2</td>
+                <td>40</td>
+                <td>40000</td>
+                <td>
+                  <div class="ascensionMatsss">
+                   <div class="ascensionMats">
+                    <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Prithiva_Topaz_Sliver.png" alt="" class="weaponimg backgroundcolor">
+                    <div class="ascensionMatss">
+                     3
+                    </div></div> 
+                    <div class="Ascensionmatsname">
+                    Prithiva Topaz Sliver
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="ascensionMatsss">
+                    <div class="ascensionMats">
+                     <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Basalt_Pillar.png" alt="" class="weaponimg backgroundcolor">
+                     <div class="ascensionMatss">
+                      2
+                     </div></div> 
+                     <div class="Ascensionmatsname">
+                     Basalt Pillar
+                     </div>
+                   </div>
+                </td>
+                <td>
+                  <div class="ascensionMatsss">
+                    <div class="ascensionMats">
+                     <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Cor_Lapis.png" alt="" class="weaponimg backgroundcolor">
+                     <div class="ascensionMatss">
+                      10
+                     </div></div> 
+                     <div class="Ascensionmatsname">
+                     Cor Lapis
+                     </div>
+                   </div>
+                </td>
+                <td>
+                  <div class="ascensionMatsss">
+                    <div class="ascensionMats">
+                     <img src="https://rerollcdn.com/GENSHIN/Farming/NEW/Slime_Condensate.png" alt="" class="weaponimg backgroundcolor">
+                     <div class="ascensionMatss">
+                      15
+                     </div></div> 
+                     <div class="Ascensionmatsname">
+                     Slime Condensate
+                     </div>
+                   </div>
+                </td>
+              </tr> 
+            </tbody>
+          </table>          
+        </div>
+      </div>
+    </div>
+   </section>
+<section class="c">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            
+        <div class="col mb-3">
+          <ul class="nav flex-column">
+            <li class="nav-i    tem mb-2"></a>GENSHIN.GG</li>
+            <li class="nav-item mb-2">GENSHIN.GG is not affiliated or endorsed by miHoYo</a></li>
+            <li class="nav-item mb-2">GENSHIN.GG is a Database and Tier List website for Genshin Impact and Honkai: Star Rail.</a></li>
+            <li class="nav-item mb-2">© GENSHIN.GG 2023</a></li>
+        </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">More Links</a></li>
+            <li class="nav-item mb-2">Contact</a></li>
+            <li class="nav-item mb-2">Privacy Policy</a></li>
+            <li class="nav-item mb-2">Manage Cookies</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">Community Links</a></li>
+            <li class="nav-item mb-2">Discord</a></li>
+            <li class="nav-item mb-2">Reddit</a></li>
+            <li class="nav-item mb-2">Facebook</a></li>
+          </ul>
+        </div>
+      </footer>
+</section>      
+</body>
+  <script>
+    
+  </script>
+</html> 
